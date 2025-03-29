@@ -1,0 +1,82 @@
+/* Accordion Container */
+.elements-fusion-accordion {
+  overflow: hidden;
+}
+
+/* Accordion Item */
+.elements-fusion-accordion .accordion-item {
+  border: 1px solid #ddd;
+}
+
+.elements-fusion-accordion .accordion-item:last-child {
+}
+
+.elements-fusion-accordion .accordion-item {
+  margin-bottom: 10px; /* Adjust the value for desired spacing */
+}
+
+.elements-fusion-accordion .accordion-item:last-child {
+  margin-bottom: 0; /* Remove margin from the last item */
+}
+
+/* Accordion Title */
+.elements-fusion-accordion .accordion-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+
+.elements-fusion-accordion .accordion-title:hover {
+  background-color: #e9e9e9;
+}
+
+/* Accordion Icons */
+.elements-fusion-accordion .accordion-icon {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.elements-fusion-accordion .accordion-icon-closed {
+  display: inline-block;
+}
+
+.elements-fusion-accordion .accordion-icon-open {
+  display: none;
+}
+
+/* Active State */
+.elements-fusion-accordion .accordion-item.active .accordion-icon-closed {
+  display: none;
+}
+
+.elements-fusion-accordion .accordion-item.active .accordion-icon-open {
+  display: inline-block;
+}
+
+/* Accordion Content */
+.elements-fusion-accordion .accordion-content {
+  padding: 15px;
+  display: none;
+  font-size: 14px;
+  color: #555;
+  background-color: #fff;
+}
+
+/* Active Content Display */
+.elements-fusion-accordion .accordion-item.active .accordion-content {
+  display: block;
+}
+
+.accordion-icon svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}

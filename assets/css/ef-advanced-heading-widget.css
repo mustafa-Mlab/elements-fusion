@@ -1,0 +1,70 @@
+/* General Style for Advanced Heading */
+.ef-advanced-heading {
+  font-weight: normal;
+  line-height: 1.5;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Icon/Image Positioning */
+.ef-advanced-heading img,
+.ef-advanced-heading i {
+  margin: 0 10px;
+}
+
+/* If the icon is to the left */
+.ef-advanced-heading .ef-icon-left {
+  margin-right: 10px;
+}
+
+/* If the icon is to the right */
+.ef-advanced-heading .ef-icon-right {
+  margin-left: 10px;
+}
+
+/* Gradient Effect for Text (Fallback for Free Version) */
+.ef-advanced-heading {
+  background: linear-gradient(
+    to right,
+    #ff7e5f,
+    #feb47b
+  ); /* Default gradient */
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent; /* Ensure the text is transparent to show the gradient */
+}
+
+/* Fallback color for unsupported browsers */
+.ef-advanced-heading::after {
+  content: attr(data-fallback-text);
+  color: #ff7e5f; /* Default fallback color */
+  visibility: hidden;
+}
+
+/* Typography Customization (can be adjusted further based on typography control) */
+.ef-advanced-heading {
+  font-family: Arial, sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+/* Icon and Image Styling */
+.ef-advanced-heading .elementor-icon {
+  font-size: 24px; /* Icon size */
+  color: #333; /* Default icon color */
+}
+
+.ef-advanced-heading img {
+  width: 30px; /* Default image size */
+  height: auto;
+}
+
+/* Customizable styles */
+.ef-advanced-heading:hover {
+  color: #ff7e5f; /* Hover effect for text */
+  cursor: pointer;
+}

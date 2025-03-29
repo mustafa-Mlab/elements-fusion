@@ -1,0 +1,47 @@
+.ef-progress-bar-wrapper {
+  margin-bottom: 20px;
+}
+
+.ef-progress-bar-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ef-progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.ef-progress-bar-fill {
+  height: 100%;
+  background-color: #4caf50;
+  width: 0;
+  transition: width 1s ease-in-out;
+}
+
+.ef-progress-bar-striped {
+  background-image: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.15) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0.15) 75%,
+    transparent 75%,
+    transparent
+  );
+  background-size: 40px 40px;
+}
+
+.ef-progress-bar-gradient {
+  background: linear-gradient(90deg, #4caf50, #81c784);
+}

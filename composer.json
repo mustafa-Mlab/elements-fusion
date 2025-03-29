@@ -1,0 +1,13 @@
+{
+  "name": "yourname/elements-fusion",
+  "description": "A custom Elementor widget bundle for WordPress.",
+  "type": "wordpress-plugin",
+  "autoload": {
+    "psr-4": {
+      "ElementsFusion\\": "includes/"
+    }
+  },
+  "require": {
+    "php": ">=7.3"
+  }
+}
