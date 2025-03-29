@@ -1,0 +1,47 @@
+# Ignore Composer dependencies
+/vendor/
+
+# Ignore system files (OS generated)
+.DS_Store
+Thumbs.db
+
+# Ignore IDE or editor-specific files
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# Ignore log files
+*.log
+
+# Ignore PHPStorm or other IDE config files
+*.iml
+*.idea/
+
+# Ignore build or deployment folders
+/build/
+
+# Ignore node_modules (if you use node for front-end assets)
+node_modules/
+
+# Ignore sensitive files
+*.env
+.env
+
+# Ignore compiled files, such as minified or generated JS and CSS
+/assets/css/*.min.css
+/assets/js/*.min.js
+
+# Ignore temporary files
+*.swp
+*.bak
+*.tmp
+
+# Ignore WordPress specific files or directories
+wp-content/uploads/
+
+# Ignore test files or directories
+/tests/
+
+# Ignore backup files
+*~
