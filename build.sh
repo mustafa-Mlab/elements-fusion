@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Copy common files
-cp -r ./admin ./assets ./includes ./vendor ./elements-fusion.php ./composer.json ./composer.lock ./README.md ./filename.txt ./build/
+cp -r ./admin ./assets ./includes ./vendor ./huge-addons.php ./composer.json ./composer.lock ./README.md ./build/
 
 # For the pro version, copy the pro folder
 cp -r ./pro ./build/pro
@@ -10,5 +10,5 @@ cp -r ./pro ./build/pro
 rm -rf ./build/pro/docs
 
 # Compress or package the build folder for deployment
-zip -r ./build/elementor-plugin-free.zip ./build/
-zip -r ./build/elementor-plugin-pro.zip ./build/
+zip -r ./build/huge-addons-free.zip ./build/
+zip -r ./build/huge-addons-pro.zip ./build/

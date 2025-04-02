@@ -1,13 +1,25 @@
 {
-  "name": "yourname/elements-fusion",
-  "description": "A custom Elementor widget bundle for WordPress.",
+  "name": "themehuge/huge-addons",
+  "description": "HugeAddons is a comprehensive Elementor Addons bundle for WordPress that provides modern, handcrafted widget blocks to enhance Elementor's functionality.",
   "type": "wordpress-plugin",
   "autoload": {
     "psr-4": {
-      "ElementsFusion\\": "includes/"
+      "HugeAddons\\": "includes/"
     }
   },
   "require": {
-    "php": ">=7.3"
+    "php": ">=7.3",
+    "composer/installers": "^1.9",
+    "elementor/elementor": "^3.0"
+  },
+  "authors": [
+    {
+      "name": "Mustafa Kamal Hossain",
+      "email": "mkamalhosssain@gmail.com"
+    }
+  ],
+  "license": "GPL-2.0-or-later",
+  "config": {
+    "optimize-autoloader": true
   }
 }
