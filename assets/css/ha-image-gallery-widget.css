@@ -1,0 +1,61 @@
+/* Gallery Container */
+.ha-gallery-container { /* Changed prefix to ha- */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: -5px; /* Adjust for gap between images */
+}
+
+/* Gallery Items */
+.ha-gallery-item { /* Changed prefix to ha- */
+  position: relative;
+  margin: 5px; /* Adjust for gap between images */
+  overflow: hidden;
+  flex-basis: calc(100% / 3 - 10px); /* Default: 3 columns */
+  box-sizing: border-box;
+}
+
+/* Two Column Layout */
+.ha-columns-2 .ha-gallery-item { /* Changed prefix to ha- */
+  flex-basis: calc(50% - 10px); /* 50% width for 2 columns */
+}
+
+/* Four Column Layout */
+.ha-columns-4 .ha-gallery-item { /* Changed prefix to ha- */
+  flex-basis: calc(25% - 10px); /* 25% width for 4 columns */
+}
+
+/* Masonry Layout */
+.ha-layout-masonry .ha-gallery-container { /* Changed prefix to ha- */
+  display: block;
+  column-count: 3; /* Default 3 columns */
+  column-gap: 10px;
+}
+
+.ha-layout-masonry .ha-gallery-item { /* Changed prefix to ha- */
+  display: inline-block;
+  margin: 0 0 10px;
+  width: 100%;
+}
+
+/* Lightbox Styling */
+.ha-gallery-lightbox img { /* Changed prefix to ha- */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Lightbox Hover Effect */
+.ha-gallery-lightbox:hover img { /* Changed prefix to ha- */
+  transform: scale(1.1); /* Slight zoom effect */
+  opacity: 0.8; /* Fade effect */
+}
+
+/* Mobile Responsiveness: Adjust layout for smaller screens */
+@media (max-width: 768px) {
+  .ha-gallery-item { /* Changed prefix to ha- */
+    flex-basis: calc(100% - 10px); /* Stack items vertically on mobile */
+  }
+
+  .ha-layout-masonry .ha-gallery-container { /* Changed prefix to ha- */
+    column-count: 1; /* Single column for mobile */
+  }
+}

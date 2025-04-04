@@ -1,0 +1,134 @@
+/* Service List Wrapper */
+.ha-service-list { /* Changed prefix to ha- */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Service Layout Grid */
+.ha-service-layout-grid { /* Changed prefix to ha- */
+  display: grid;
+  gap: 20px;
+}
+
+/* Service Item Styling */
+.ha-service-item { /* Changed prefix to ha- */
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+/* Icon Position Left */
+.ha-icon-position-left .ha-service-icon { /* Changed prefix to ha- */
+  margin-right: 15px;
+}
+
+/* Icon Position Right */
+.ha-icon-position-right { /* Changed prefix to ha- */
+  flex-direction: row-reverse;
+}
+
+.ha-icon-position-right .ha-service-icon { /* Changed prefix to ha- */
+  margin-left: 15px;
+}
+
+/* Icon Position Top */
+.ha-icon-position-top { /* Changed prefix to ha- */
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.ha-icon-position-top .ha-service-icon { /* Changed prefix to ha- */
+  margin-bottom: 15px;
+}
+
+/* Inline Icon Position */
+.ha-icon-position-inline .ha-service-icon { /* Changed prefix to ha- */
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* Service Icon Styling */
+.ha-service-icon i { /* Changed prefix to ha- */
+  color: #4caf50;
+  font-size: 24px;
+}
+
+/* Service Content Styling */
+.ha-service-content { /* Changed prefix to ha- */
+  flex: 1;
+}
+
+/* Service Title */
+.ha-service-title { /* Changed prefix to ha- */
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin: 0 0 5px 0;
+}
+
+/* Service Description */
+.ha-service-description { /* Changed prefix to ha- */
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 10px 0;
+}
+
+/* Service Button */
+.ha-service-button { /* Changed prefix to ha- */
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #4caf50;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+/* Button Hover Effect */
+.ha-service-button:hover { /* Changed prefix to ha- */
+  background-color: #45a049;
+}
+
+/* Hover Effects for Service Items */
+.ha-hover-effect-shadow:hover { /* Changed prefix to ha- */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.ha-hover-effect-scale:hover { /* Changed prefix to ha- */
+  transform: scale(1.05);
+}
+
+.ha-hover-effect-fade:hover { /* Changed prefix to ha- */
+  opacity: 0.8;
+}
+
+/* Mobile Responsiveness: Adjust layout for smaller screens */
+@media (max-width: 768px) {
+  .ha-service-list { /* Changed prefix to ha- */
+    gap: 15px; /* Reduce gap between items on mobile */
+  }
+
+  .ha-service-item { /* Changed prefix to ha- */
+    flex-direction: column; /* Stack items vertically on mobile */
+    padding: 15px; /* Adjust padding on mobile */
+  }
+
+  .ha-service-title { /* Changed prefix to ha- */
+    font-size: 16px; /* Adjust title font size for mobile */
+  }
+
+  .ha-service-description { /* Changed prefix to ha- */
+    font-size: 12px; /* Adjust description font size for mobile */
+  }
+
+  .ha-service-button { /* Changed prefix to ha- */
+    font-size: 12px; /* Adjust button font size for mobile */
+    padding: 8px 15px; /* Adjust padding for button on mobile */
+  }
+}

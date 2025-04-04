@@ -48,30 +48,27 @@ require_once __DIR__ . '/vendor/autoload.php';
 // Initialize the plugin
 use HugeAddons\Loader;
 
-
-
-function hugeaddons_init() {
-    $loader = new Loader();
-    $loader->init();
+function ha_init() {
+	$loader = new Loader();
+	$loader->init();
 }
-add_action( 'plugins_loaded', 'hugeaddons_init' );
+add_action( 'plugins_loaded', 'ha_init' );
 
-// Plugin Activation Hook
-function hugeaddons_activate() {
-    // Perform setup tasks (e.g., creating database tables, default settings, etc.)
+function ha_activate() {
+	// Perform setup tasks
 }
-register_activation_hook( __FILE__, 'hugeaddons_activate' );
+register_activation_hook( __FILE__, 'ha_activate' );
 
-// Plugin Deactivation Hook
-function hugeaddons_deactivate() {
-    // Perform cleanup tasks (e.g., clearing transients, resetting settings, etc.)
+function ha_deactivate() {
+	// Perform cleanup tasks
 }
-register_deactivation_hook( __FILE__, 'hugeaddons_deactivate' );
+register_deactivation_hook( __FILE__, 'ha_deactivate' );
 
-function hugeaddons_load_textdomain() {
-    load_plugin_textdomain( 'huge-addons', false, basename( dirname( __FILE__ ) ) . '/languages' );
+function ha_load_textdomain() {
+	load_plugin_textdomain( 'huge-addons', false, basename( dirname( __FILE__ ) ) . '/languages' );
 }
-add_action( 'plugins_loaded', 'hugeaddons_load_textdomain' );
+add_action( 'plugins_loaded', 'ha_load_textdomain' );
+
 
 // Activation and Deactivation hooks
 // if (class_exists('\\MasterAddons\\Master_Elementor_Addons')) {

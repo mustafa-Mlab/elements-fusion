@@ -1,0 +1,75 @@
+# Translation file for Huge Addons for Elementor
+# Copyright (C) 2025 Huge Addons. All rights reserved.
+# Translator: Your Name <youremail@example.com>
+# Plugin: Huge Addons for Elementor
+# Text Domain: huge-addons
+
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Report-Msgid-Bugs-To: https://your-plugin-url.com/bugs\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Your Name <youremail@example.com>\n"
+"Language-Team: English <youremail@example.com>\n"
+"Language: en_US\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# Admin Dashboard
+msgid "Huge Addons Dashboard"
+msgstr "Huge Addons Dashboard"
+
+msgid "Welcome to the Huge Addons plugin dashboard!"
+msgstr "Welcome to the Huge Addons plugin dashboard!"
+
+# Other Admin Panel Strings (add more as needed)
+msgid "Elements Fusion"
+msgstr "Huge Addons"
+
+# Accordion Widget
+msgid "Accordion"
+msgstr "Accordion"
+
+# Testimonial Widget
+msgid "Testimonial"
+msgstr "Testimonial"
+
+# Service List Widget
+msgid "Service List"
+msgstr "Service List"
+
+# Progress Bar Widget
+msgid "Progress Bar"
+msgstr "Progress Bar"
+
+# Countdown Timer Widget
+msgid "Countdown Timer"
+msgstr "Countdown Timer"
+
+# Pricing Table Widget
+msgid "Pricing Table"
+msgstr "Pricing Table"
+
+# Content Toggle Widget
+msgid "Content Toggle"
+msgstr "Content Toggle"
+
+# Additional strings
+msgid "Featured"
+msgstr "Featured"
+
+msgid "Close"
+msgstr "Close"
+
+msgid "Read More"
+msgstr "Read More"
+
+msgid "Action"
+msgstr "Action"
+
+msgid "Message"
+msgstr "Message"
+
+msgid "Redirect"
+msgstr "Redirect"
+
+

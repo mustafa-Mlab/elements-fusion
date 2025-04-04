@@ -1,0 +1,71 @@
+/* Post Grid Container */
+.ha-post-grid { /* Changed prefix to ha- */
+  display: grid;
+  gap: 20px; /* Adjust the gap between items */
+  width: 100%;
+}
+
+/* Post Grid Item */
+.ha-post-grid-item { /* Changed prefix to ha- */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+/* Zoom Effect */
+.ha-post-grid-item.zoom .ha-post-thumbnail img { /* Changed prefix to ha- */
+  transition: transform 0.3s ease;
+}
+
+.ha-post-grid-item.zoom:hover .ha-post-thumbnail img { /* Changed prefix to ha- */
+  transform: scale(1.1); /* Zoom effect on hover */
+}
+
+/* Fade Effect */
+.ha-post-grid-item.fade .ha-post-thumbnail img { /* Changed prefix to ha- */
+  opacity: 1; /* Default opacity */
+  transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+.ha-post-grid-item.fade:hover .ha-post-thumbnail img { /* Changed prefix to ha- */
+  opacity: 0.7; /* Fade effect on hover */
+}
+
+/* Shadow Effect */
+.ha-post-grid-item.shadow:hover { /* Changed prefix to ha- */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+}
+
+/* Post Thumbnail */
+.ha-post-thumbnail img { /* Changed prefix to ha- */
+  width: 100%;
+  display: block;
+}
+
+/* Post Title */
+.ha-post-title { /* Changed prefix to ha- */
+  padding: 10px;
+  text-align: center;
+  font-size: 16px; /* Assuming font settings will be controlled via Elementor */
+  font-weight: bold; /* Assuming font settings will be controlled via Elementor */
+}
+
+/* Post Title Link */
+.ha-post-title a { /* Changed prefix to ha- */
+  text-decoration: none;
+  color: #333;
+}
+
+/* Hover effect for Post Title Link */
+.ha-post-title a:hover { /* Changed prefix to ha- */
+  color: #0073e6;
+}
+
+/* Mobile Responsiveness: Adjust grid layout for smaller screens */
+@media (max-width: 768px) {
+  .ha-post-grid { /* Changed prefix to ha- */
+    grid-template-columns: 1fr; /* Single column layout for mobile */
+  }
+}

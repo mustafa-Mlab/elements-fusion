@@ -1,0 +1,78 @@
+/* Testimonial Widget Styles */
+.ha-testimonial { /* Changed prefix to ha- */
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+/* Testimonial Image */
+.ha-testimonial-image img { /* Changed prefix to ha- */
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 20px;
+  object-fit: cover;
+}
+
+/* Testimonial Content */
+.ha-testimonial-content { /* Changed prefix to ha- */
+  max-width: 80%;
+}
+
+/* Testimonial Name */
+.ha-testimonial-name { /* Changed prefix to ha- */
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+/* Testimonial Designation */
+.ha-testimonial-designation { /* Changed prefix to ha- */
+  font-size: 14px;
+  font-weight: 500;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+/* Testimonial Text */
+.ha-testimonial-text { /* Changed prefix to ha- */
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Mobile Responsiveness: Adjust layout for smaller screens */
+@media (max-width: 768px) {
+  .ha-testimonial { /* Changed prefix to ha- */
+    flex-direction: column; /* Stack items vertically on mobile */
+    padding: 15px; /* Reduce padding for mobile */
+  }
+
+  .ha-testimonial-image img { /* Changed prefix to ha- */
+    width: 60px; /* Smaller image size for mobile */
+    height: 60px;
+    margin-right: 0; /* Remove right margin on mobile */
+    margin-bottom: 10px; /* Add bottom margin for spacing */
+  }
+
+  .ha-testimonial-content { /* Changed prefix to ha- */
+    max-width: 100%; /* Allow content to take full width on mobile */
+  }
+
+  .ha-testimonial-name { /* Changed prefix to ha- */
+    font-size: 16px; /* Adjust font size for mobile */
+  }
+
+  .ha-testimonial-designation { /* Changed prefix to ha- */
+    font-size: 12px; /* Adjust font size for mobile */
+  }
+
+  .ha-testimonial-text { /* Changed prefix to ha- */
+    font-size: 14px; /* Adjust font size for mobile */
+  }
+}

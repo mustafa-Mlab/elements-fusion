@@ -16,7 +16,7 @@ Thumbs.db
 
 # Ignore PHPStorm or other IDE config files
 *.iml
-*.idea/
+.idea/
 
 # Ignore build or deployment folders
 /build/
@@ -37,7 +37,7 @@ node_modules/
 *.bak
 *.tmp
 
-# Ignore WordPress specific files or directories
+# Ignore WordPress specific files or directories (if relevant to plugin)
 wp-content/uploads/
 
 # Ignore test files or directories
@@ -45,3 +45,18 @@ wp-content/uploads/
 
 # Ignore backup files
 *~
+
+# Ignore WordPress database backup files (if applicable)
+*.sql
+
+# Ignore WordPress debug files
+debug.log
+
+# Ignore Composer lock file (if not using Composer for project dependencies)
+composer.lock
+
+# Ignore WP-CLI export files
+*.export
+
+# Ignore generated assets
+/assets/css/generated/

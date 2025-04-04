@@ -1,18 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const accordions = document.querySelectorAll(".elements-fusion-accordion");
+  // Select all the accordions with the new 'ha-' prefix
+  const accordions = document.querySelectorAll(".ha-accordion");
 
   accordions.forEach((accordion) => {
-    const accordionItems = accordion.querySelectorAll(".accordion-item");
+    const accordionItems = accordion.querySelectorAll(".ha-accordion-item");
 
     accordionItems.forEach((item) => {
-      const title = item.querySelector(".accordion-title");
+      const title = item.querySelector(".ha-accordion-title");
 
       title.addEventListener("click", () => {
         // Close all other items in this specific accordion
         accordionItems.forEach((otherItem) => {
           if (otherItem !== item) {
             otherItem.classList.remove("active");
-            otherItem.querySelector(".accordion-content").style.display =
+            otherItem.querySelector(".ha-accordion-content").style.display =
               "none";
           }
         });
@@ -21,10 +22,10 @@ document.addEventListener("DOMContentLoaded", function () {
         const isActive = item.classList.contains("active");
         if (isActive) {
           item.classList.remove("active");
-          item.querySelector(".accordion-content").style.display = "none";
+          item.querySelector(".ha-accordion-content").style.display = "none";
         } else {
           item.classList.add("active");
-          item.querySelector(".accordion-content").style.display = "block";
+          item.querySelector(".ha-accordion-content").style.display = "block";
         }
       });
     });

@@ -1,0 +1,64 @@
+/* Progress Bar Wrapper */
+.ha-progress-bar-wrapper { /* Changed prefix to ha- */
+  margin-bottom: 20px;
+}
+
+/* Progress Bar Title */
+.ha-progress-bar-title { /* Changed prefix to ha- */
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Progress Bar Container */
+.ha-progress-bar { /* Changed prefix to ha- */
+  width: 100%;
+  height: 10px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Progress Bar Fill */
+.ha-progress-bar-fill { /* Changed prefix to ha- */
+  height: 100%;
+  background-color: #4caf50;
+  width: 0;
+  transition: width 1s ease-in-out;
+}
+
+/* Striped Progress Bar */
+.ha-progress-bar-striped { /* Changed prefix to ha- */
+  background-image: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.15) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0.15) 75%,
+    transparent 75%,
+    transparent
+  );
+  background-size: 40px 40px;
+}
+
+/* Gradient Progress Bar */
+.ha-progress-bar-gradient { /* Changed prefix to ha- */
+  background: linear-gradient(90deg, #4caf50, #81c784);
+}
+
+/* Mobile Responsiveness: Adjust layout for smaller screens */
+@media (max-width: 768px) {
+  .ha-progress-bar-wrapper { /* Changed prefix to ha- */
+    margin-bottom: 15px; /* Reduce margin for mobile */
+  }
+
+  .ha-progress-bar-title { /* Changed prefix to ha- */
+    font-size: 14px; /* Adjust font size for mobile */
+  }
+}

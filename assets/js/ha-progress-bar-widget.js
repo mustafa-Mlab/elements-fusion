@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const bars = document.querySelectorAll(".ef-progress-bar-fill");
+  // Select all progress bars with the updated 'ha-' prefix
+  const bars = document.querySelectorAll(".ha-progress-bar-fill"); /* Changed prefix to ha- */
+  
   bars.forEach((bar) => {
     const width = bar.style.width;
     bar.style.width = "0";

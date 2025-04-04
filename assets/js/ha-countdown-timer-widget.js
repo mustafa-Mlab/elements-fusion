@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const countdown = document.querySelector(".ef-countdown-timer");
+  // Select the countdown element with the updated 'ha-' prefix
+  const countdown = document.querySelector(".ha-countdown-timer"); /* Changed prefix to ha- */
   const targetDate = new Date(countdown.dataset.date).getTime();
   const expiryAction = countdown.dataset.expiryAction;
   const expiryMessage = countdown.dataset.expiryMessage;
@@ -13,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
       clearInterval(timer);
 
       if (expiryAction === "message") {
-        countdown.innerHTML = `<div class="ef-countdown-expiry-message">${expiryMessage}</div>`;
+        countdown.innerHTML = `<div class="ha-countdown-expiry-message">${expiryMessage}</div>`; /* Changed prefix to ha- */
       } else if (expiryAction === "redirect" && expiryRedirect) {
         window.location.href = expiryRedirect;
       }

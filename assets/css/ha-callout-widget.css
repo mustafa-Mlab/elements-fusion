@@ -1,5 +1,5 @@
 /* General Styles for Callout Section */
-.callout-section {
+.ha-callout-section {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -12,25 +12,25 @@
 }
 
 /* Left Section (Title and Content) */
-.callout-left {
+.ha-callout-left {
   max-width: 70%;
 }
 
-.callout-title {
+.ha-callout-title {
   font-size: 24px;
   font-weight: bold;
   color: #333;
   margin-bottom: 10px;
 }
 
-.callout-content {
+.ha-callout-content {
   font-size: 16px;
   color: #555;
   line-height: 1.6;
 }
 
 /* Right Section (Button) */
-.callout-button {
+.ha-callout-button {
   display: inline-block;
   padding: 10px 20px;
   background-color: #0073e6;
@@ -39,26 +39,29 @@
   font-size: 16px;
   font-weight: 600;
   border-radius: 5px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.callout-button:hover {
+.ha-callout-button:hover {
   background-color: #005bb5;
+  transform: scale(1.05); /* Added scaling effect for better interaction */
 }
 
 /* Responsive Styling */
 @media (max-width: 768px) {
-  .callout-section {
+  .ha-callout-section {
     flex-direction: column;
     align-items: flex-start;
+    padding: 15px; /* Reduced padding for smaller screens */
   }
 
-  .callout-left {
+  .ha-callout-left {
     max-width: 100%;
     margin-bottom: 15px;
   }
 
-  .callout-button {
+  .ha-callout-button {
     align-self: flex-start;
+    margin-top: 10px; /* Adjust margin for button in mobile view */
   }
 }

@@ -1,0 +1,58 @@
+/* General Countdown Timer Style */
+.ha-countdown-timer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Countdown Item Style */
+.ha-countdown-item {
+  text-align: center;
+}
+
+/* Countdown Number Style */
+.ha-countdown-number {
+  font-size: 2rem; /* Adjust font size */
+  color: #333;
+  font-weight: bold;
+}
+
+/* Countdown Label Style */
+.ha-countdown-label {
+  display: block;
+  font-size: 1rem;
+  color: #666;
+  margin-top: 5px;
+}
+
+/* Expiry Message Style */
+.ha-countdown-expiry-message {
+  font-size: 1.5rem;
+  color: #333;
+  text-align: center;
+  font-weight: bold; /* Added font-weight for better emphasis on expiry message */
+}
+
+/* Added: Hover effect for countdown number (optional for interaction) */
+.ha-countdown-number:hover {
+  color: #0073e6; /* Change color on hover for interaction */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+/* Mobile Responsiveness: Adjust countdown number font size and layout on smaller screens */
+@media (max-width: 768px) {
+  .ha-countdown-timer {
+    flex-direction: column; /* Stack the countdown items vertically on mobile */
+    gap: 10px; /* Reduce gap between items for better fit on smaller screens */
+  }
+
+  .ha-countdown-number {
+    font-size: 1.5rem; /* Reduce font size for countdown number on mobile */
+  }
+
+  .ha-countdown-label {
+    font-size: 0.875rem; /* Smaller label font size for mobile */
+  }
+}
+

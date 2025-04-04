@@ -1,6 +1,6 @@
 <?php 
 
-namespace ElementsFusion\Widgets\Renders;
+namespace HugeAddons\Widgets\Renders;
 
 use Elementor\Icons_Manager;
 
@@ -9,34 +9,31 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Render function for EF_Accordion_Widget
+ * Render function for HA_Accordion_Widget
  *
  * @param array $settings The widget settings passed from the main widget class.
  */
-function render_ef_accordion_widget( $settings ) {
+function render_ha_accordion_widget( $settings ) {
     if ( empty( $settings['accordion_items'] ) ) {
-        return; // If no items are set, do nothing
+        return;
     }
 
-    echo '<div class="elements-fusion-accordion">';
+    echo '<div class="ha-accordion">';
 
     foreach ( $settings['accordion_items'] as $index => $item ) {
-        $item_id = 'accordion-item-' . $index;
+        $item_id   = 'accordion-item-' . $index;
         $is_active = $index === 0 ? 'active' : '';
 
-        $icon_html = '';
+        $icon_html        = '';
         $active_icon_html = '';
 
-        // Check if icons are enabled
         if ( 'yes' === $settings['show_icons'] ) {
-            // Render normal icon
             if ( ! empty( $settings['icon_normal'] ) ) {
                 ob_start();
                 Icons_Manager::render_icon( $settings['icon_normal'], [ 'aria-hidden' => 'true' ] );
                 $icon_html = ob_get_clean();
             }
 
-            // Render active icon
             if ( ! empty( $settings['icon_active'] ) ) {
                 ob_start();
                 Icons_Manager::render_icon( $settings['icon_active'], [ 'aria-hidden' => 'true' ] );
@@ -44,19 +41,22 @@ function render_ef_accordion_widget( $settings ) {
             }
         }
 
-        echo '<div class="accordion-item ' . esc_attr( $is_active ) . '">';
-        echo '<div class="accordion-title" id="' . esc_attr( $item_id ) . '">';
+        // echo '<div class="accordion-item ' . esc_attr( $is_active ) . '">';
+        echo '<div class="ha-accordion-item ' . esc_attr( $is_active ) . '">';
+        // echo '<div class="accordion-title" id="' . esc_attr( $item_id ) . '">';
+        echo '<div class="accordion-title" id="' . esc_attr( $item_id ) . '" aria-expanded="' . ($is_active ? 'true' : 'false') . '" aria-controls="' . esc_attr( $item_id ) . '-content">';
+
         echo '<span>' . esc_html( $item['accordion_title'] ) . '</span>';
 
-        // Render icons
         if ( 'yes' === $settings['show_icons'] ) {
             echo '<span class="accordion-icon accordion-icon-closed">' . $icon_html . '</span>';
             echo '<span class="accordion-icon accordion-icon-open">' . $active_icon_html . '</span>';
         }
 
         echo '</div>';
+        // echo '<div class="accordion-content">' . $item['accordion_content'] . '</div>';
+        echo '<div class="accordion-content">' . wp_kses_post( $item['accordion_content'] ) . '</div>';
 
-        echo '<div class="accordion-content">' . $item['accordion_content'] . '</div>';
         echo '</div>';
     }
 

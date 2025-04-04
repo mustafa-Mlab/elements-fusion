@@ -1,6 +1,6 @@
 <?php
 
-namespace ElementsFusion\Widgets;
+namespace HugeAddons\Widgets;
 
 use Elementor\Controls_Manager;
 use Elementor\Repeater;
@@ -10,14 +10,14 @@ if ( !defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly
 }
 
-class EF_Accordion_Widget extends Widget_Base {
+class HA_Accordion_Widget extends Widget_Base {
 
     public function get_name() {
-        return ELEMENTS_FUSION_WIDGET_PREFIX . 'accordion';
+        return HA_WIDGET_PREFIX . 'accordion';
     }
 
     public function get_title() {
-        return __( 'Accordion', 'elements-fusion' );
+        return __( 'Accordion', 'huge-addons' );
     }
 
     public function get_icon() {
@@ -25,15 +25,14 @@ class EF_Accordion_Widget extends Widget_Base {
     }
 
     public function get_categories() {
-        return ['elements-fusion-category']; // Assign to custom category
+        return ['ha-addons-category'];
     }
 
     protected function _register_controls() {
-        // Accordion Items Section
         $this->start_controls_section(
             'accordion_content_section',
             [
-                'label' => __( 'Accordion', 'elements-fusion' ),
+                'label' => __( 'Accordion', 'huge-addons' ),
                 'tab'   => Controls_Manager::TAB_CONTENT,
             ]
         );
@@ -43,9 +42,9 @@ class EF_Accordion_Widget extends Widget_Base {
         $repeater->add_control(
             'accordion_title',
             [
-                'label'       => __( 'Title', 'elements-fusion' ),
+                'label'       => __( 'Title', 'huge-addons' ),
                 'type'        => Controls_Manager::TEXT,
-                'default'     => __( 'Accordion Title', 'elements-fusion' ),
+                'default'     => __( 'Accordion Title', 'huge-addons' ),
                 'label_block' => true,
             ]
         );
@@ -53,9 +52,9 @@ class EF_Accordion_Widget extends Widget_Base {
         $repeater->add_control(
             'accordion_content',
             [
-                'label'      => __( 'Content', 'elements-fusion' ),
+                'label'      => __( 'Content', 'huge-addons' ),
                 'type'       => Controls_Manager::WYSIWYG,
-                'default'    => __( 'Accordion content goes here...', 'elements-fusion' ),
+                'default'    => __( 'Accordion content goes here...', 'huge-addons' ),
                 'show_label' => false,
             ]
         );
@@ -63,17 +62,17 @@ class EF_Accordion_Widget extends Widget_Base {
         $this->add_control(
             'accordion_items',
             [
-                'label'       => __( 'Items', 'elements-fusion' ),
+                'label'       => __( 'Items', 'huge-addons' ),
                 'type'        => Controls_Manager::REPEATER,
                 'fields'      => $repeater->get_controls(),
                 'default'     => [
                     [
-                        'accordion_title'   => __( 'Accordion #1', 'elements-fusion' ),
-                        'accordion_content' => __( 'Content for accordion item #1', 'elements-fusion' ),
+                        'accordion_title'   => __( 'Accordion #1', 'huge-addons' ),
+                        'accordion_content' => __( 'Content for accordion item #1', 'huge-addons' ),
                     ],
                     [
-                        'accordion_title'   => __( 'Accordion #2', 'elements-fusion' ),
-                        'accordion_content' => __( 'Content for accordion item #2', 'elements-fusion' ),
+                        'accordion_title'   => __( 'Accordion #2', 'huge-addons' ),
+                        'accordion_content' => __( 'Content for accordion item #2', 'huge-addons' ),
                     ],
                 ],
                 'title_field' => '{{{ accordion_title }}}',
@@ -86,7 +85,7 @@ class EF_Accordion_Widget extends Widget_Base {
         $this->start_controls_section(
             'accordion_settings_section',
             [
-                'label' => __( 'Settings', 'elements-fusion' ),
+                'label' => __( 'Settings', 'huge-addons' ),
                 'tab'   => Controls_Manager::TAB_CONTENT,
             ]
         );
@@ -94,10 +93,10 @@ class EF_Accordion_Widget extends Widget_Base {
         $this->add_control(
             'show_icons',
             [
-                'label'        => __( 'Show Title Icon', 'elements-fusion' ),
+                'label'        => __( 'Show Title Icon', 'huge-addons' ),
                 'type'         => Controls_Manager::SWITCHER,
-                'label_on'     => __( 'Yes', 'elements-fusion' ),
-                'label_off'    => __( 'No', 'elements-fusion' ),
+                'label_on'     => __( 'Yes', 'huge-addons' ),
+                'label_off'    => __( 'No', 'huge-addons' ),
                 'return_value' => 'yes',
                 'default'      => 'no',
             ]
@@ -106,7 +105,7 @@ class EF_Accordion_Widget extends Widget_Base {
         $this->add_control(
             'icon_normal',
             [
-                'label'     => __( 'Icon', 'elements-fusion' ),
+                'label'     => __( 'Icon', 'huge-addons' ),
                 'type'      => Controls_Manager::ICONS,
                 'default'   => [
                     'value'   => 'fas fa-plus',
@@ -121,7 +120,7 @@ class EF_Accordion_Widget extends Widget_Base {
         $this->add_control(
             'icon_active',
             [
-                'label'     => __( 'Active Icon', 'elements-fusion' ),
+                'label'     => __( 'Active Icon', 'huge-addons' ),
                 'type'      => Controls_Manager::ICONS,
                 'default'   => [
                     'value'   => 'fas fa-minus',
@@ -140,7 +139,7 @@ class EF_Accordion_Widget extends Widget_Base {
         $settings = $this->get_settings_for_display();
 
         // Include the render file and call the render function
-        require_once __DIR__ . '/renders/render-ef-accordion-widget.php';
-        \ElementsFusion\Widgets\Renders\render_ef_accordion_widget( $settings );
+        require_once __DIR__ . '/renders/render-ha-accordion-widget.php';
+        \HugeAddons\Widgets\Renders\render_ha_accordion_widget( $settings );
     }
 }

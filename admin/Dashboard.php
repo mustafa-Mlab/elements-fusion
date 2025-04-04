@@ -1,6 +1,6 @@
 <?php
 
-namespace ElementsFusion\Admin;
+namespace HugeAddons\Admin; // Updated namespace to HugeAddons\Admin
 
 class Dashboard {
 
@@ -10,10 +10,10 @@ class Dashboard {
 
     public function add_admin_menu() {
         add_menu_page(
-            __( 'Elements Fusion', 'elements-fusion' ),
-            __( 'Elements Fusion', 'elements-fusion' ),
+            __( 'Huge Addons', 'huge-addons' ), // Updated text domain to huge-addons
+            __( 'Huge Addons', 'huge-addons' ), // Updated text domain to huge-addons
             'manage_options',
-            'elements-fusion',
+            'huge-addons', // Updated slug to huge-addons
             [ $this, 'render_dashboard' ],
             'dashicons-admin-generic'
         );

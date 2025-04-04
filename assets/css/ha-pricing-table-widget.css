@@ -1,0 +1,116 @@
+/* Pricing Table Container */
+.ha-pricing-table { /* Changed prefix to ha- */
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #fff;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Featured Pricing Table */
+.ha-pricing-table.featured { /* Changed prefix to ha- */
+  border: 2px solid #ffd700;
+}
+
+/* Featured Label for Pricing Table */
+.ha-pricing-table.featured::before { /* Changed prefix to ha- */
+  content: "Featured";
+  position: absolute;
+  top: 10px;
+  right: -10px;
+  background-color: #ffd700;
+  color: #000;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 3px;
+  transform: rotate(45deg);
+}
+
+/* Pricing Table Title */
+.ha-pricing-table-title { /* Changed prefix to ha- */
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Pricing Table Price */
+.ha-pricing-table-price { /* Changed prefix to ha- */
+  font-size: 24px;
+  color: #4caf50;
+  margin: 10px 0;
+}
+
+/* Currency Symbol */
+.ha-pricing-table-currency { /* Changed prefix to ha- */
+  font-size: 18px;
+  vertical-align: top;
+}
+
+/* Amount in Pricing Table */
+.ha-pricing-table-amount { /* Changed prefix to ha- */
+  font-size: 36px;
+  font-weight: bold;
+}
+
+/* Pricing Table Period (e.g., monthly/yearly) */
+.ha-pricing-table-period { /* Changed prefix to ha- */
+  font-size: 14px;
+  color: #777;
+}
+
+/* Pricing Table Features List */
+.ha-pricing-table-features { /* Changed prefix to ha- */
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+/* Feature List Items */
+.ha-pricing-table-features li { /* Changed prefix to ha- */
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+/* Pricing Table Button */
+.ha-pricing-table-button { /* Changed prefix to ha- */
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #4caf50;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover Effect for Pricing Table Button */
+.ha-pricing-table-button:hover { /* Changed prefix to ha- */
+  background-color: #45a049;
+}
+
+/* Mobile Responsiveness: Adjust layout for smaller screens */
+@media (max-width: 768px) {
+  .ha-pricing-table { /* Changed prefix to ha- */
+    padding: 15px; /* Reduce padding on mobile */
+  }
+
+  .ha-pricing-table-title { /* Changed prefix to ha- */
+    font-size: 16px; /* Adjust font size for mobile */
+  }
+
+  .ha-pricing-table-price { /* Changed prefix to ha- */
+    font-size: 20px; /* Adjust font size for mobile */
+  }
+
+  .ha-pricing-table-amount { /* Changed prefix to ha- */
+    font-size: 30px; /* Adjust font size for mobile */
+  }
+
+  .ha-pricing-table-button { /* Changed prefix to ha- */
+    font-size: 12px; /* Adjust button font size for mobile */
+    padding: 8px 15px; /* Adjust button padding for mobile */
+  }
+}
