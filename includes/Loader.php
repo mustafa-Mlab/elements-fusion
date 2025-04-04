@@ -23,7 +23,7 @@ class Loader {
 
     private function register_widget_category() {
         add_action( 'elementor/elements/categories_registered', function ( $elements_manager ) {
-            $$elements_manager->add_category(
+            $elements_manager->add_category(
                 'ha-addons-category',
                 [
                     'title' => __( 'Huge Addons', 'huge-addons' ),

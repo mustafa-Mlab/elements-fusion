@@ -49,7 +49,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 use HugeAddons\Loader;
 
 function ha_init() {
-	$loader = new Loader();
+	$loader = new HugeAddons\Loader();
 	$loader->init();
 }
 add_action( 'plugins_loaded', 'ha_init' );
@@ -71,9 +71,9 @@ add_action( 'plugins_loaded', 'ha_load_textdomain' );
 
 
 // Activation and Deactivation hooks
-// if (class_exists('\\MasterAddons\\Master_Elementor_Addons')) {
-// 	register_activation_hook(__FILE__, array('\\MasterAddons\\Master_Elementor_Addons', 'jltma_plugin_activation_hook'));
-// 	register_deactivation_hook(__FILE__, array('\\MasterAddons\\Master_Elementor_Addons', 'jltma_plugin_deactivation_hook'));
+// if (class_exists('\\HugeAddons\\Loader')) {
+// 	register_activation_hook(__FILE__, array('\\HugeAddons\\Loader', 'ha_plugin_activation_hook'));
+// 	register_deactivation_hook(__FILE__, array('\\HugeAddons\\Loader', 'ha_plugin_deactivation_hook'));
 // }
 
 

@@ -60,3 +60,5 @@ composer.lock
 
 # Ignore generated assets
 /assets/css/generated/
+
+file-structure.txt
