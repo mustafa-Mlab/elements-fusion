@@ -47,54 +47,74 @@ class Loader {
             }
         }
     }
-
+    
     private function enqueue_widget_assets( $class_name ) {
         $widget_name = strtolower( str_replace( '_', '-', $this->get_widget_name( $class_name ) ) );
-
+    
+        // CSS and JS file paths for the widget
         $css_url = HA_URL . "assets/css/{$widget_name}.css";
         $js_url = HA_URL . "assets/js/{$widget_name}.js";
-
+    
+        // File paths for the widget's assets
         $css_file_path = HA_PATH . "assets/css/{$widget_name}.css";
         $js_file_path = HA_PATH . "assets/js/{$widget_name}.js";
-
-        add_action( 'elementor/frontend/after_enqueue_scripts', function () use ( $widget_name, $css_file_path, $js_file_path, $css_url, $js_url ) {
-            if ( file_exists( $css_file_path ) ) {
-                wp_enqueue_style( 'ha-' . $widget_name, $css_url, [], '1.0.0' );
-            }
-
-            if ( file_exists( $js_file_path ) ) {
-                wp_enqueue_script( 'ha-' . $widget_name, $js_url, ['jquery'], '1.0.0', true );
-            }
-        } );
-
-        add_action( 'elementor/editor/after_enqueue_scripts', function () use ( $widget_name, $css_file_path, $js_file_path, $css_url, $js_url ) {
-            if ( file_exists( $css_file_path ) ) {
-                wp_enqueue_style( 'ha-' . $widget_name, $css_url, [], '1.0.0' );
-            }
-
-            if ( file_exists( $js_file_path ) ) {
-                wp_enqueue_script( 'ha-' . $widget_name, $js_url, ['jquery'], '1.0.0', true );
-            }
-        } );
-
+    
+        // Enqueue CSS and JS for frontend and editor (ensuring no duplicates)
+        $this->enqueue_widget_files( $css_url, $js_url, $css_file_path, $js_file_path, $widget_name );
+    
+        // Conditionally enqueue Lottie if required by the widget
+        if ( strpos( $widget_name, 'advanced-icon-box' ) !== false ) {
+            wp_register_script('lottie-player', 'https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.10.0/lottie.min.js', [], '5.10.0', true);
+            wp_enqueue_script('lottie-player');
+        }
+    
         $this->conditionally_enqueue_slick( $widget_name );
     }
-
+    
+    private function enqueue_widget_files( $css_url, $js_url, $css_file_path, $js_file_path, $widget_name ) {
+        // Enqueue for frontend
+        add_action( 'elementor/frontend/after_enqueue_scripts', function () use ( $css_file_path, $js_file_path, $css_url, $js_url, $widget_name ) {
+            // Enqueue CSS if file exists
+            if ( file_exists( $css_file_path ) && !wp_style_is( 'ha-' . $widget_name, 'enqueued' ) ) {
+                wp_enqueue_style( 'ha-' . $widget_name, $css_url, [], '1.0.0' );
+            }
+    
+            // Enqueue JS if file exists
+            if ( file_exists( $js_file_path ) && !wp_script_is( 'ha-' . $widget_name, 'enqueued' ) ) {
+                wp_enqueue_script( 'ha-' . $widget_name, $js_url, ['jquery'], '1.0.0', true );
+            }
+        });
+    
+        // Enqueue for editor
+        add_action( 'elementor/editor/after_enqueue_scripts', function () use ( $css_file_path, $js_file_path, $css_url, $js_url, $widget_name ) {
+            // Enqueue CSS if file exists
+            if ( file_exists( $css_file_path ) && !wp_style_is( 'ha-' . $widget_name, 'enqueued' ) ) {
+                wp_enqueue_style( 'ha-' . $widget_name, $css_url, [], '1.0.0' );
+            }
+    
+            // Enqueue JS if file exists
+            if ( file_exists( $js_file_path ) && !wp_script_is( 'ha-' . $widget_name, 'enqueued' ) ) {
+                wp_enqueue_script( 'ha-' . $widget_name, $js_url, ['jquery'], '1.0.0', true );
+            }
+        });
+    }
+    
     private function conditionally_enqueue_slick( $widget_name ) {
         $widgets_using_swiper = ['post-carousel', 'image-carousel', 'testimonials-slider', 'ef-service-list-widget'];
-
+    
         if ( in_array( $widget_name, $widgets_using_swiper, true ) ) {
             add_action( 'elementor/frontend/after_enqueue_scripts', function () {
                 wp_enqueue_style( 'swiper-css', 'https://unpkg.com/swiper/swiper-bundle.min.css', [], '8.0.0' );
                 wp_enqueue_script( 'swiper-js', 'https://unpkg.com/swiper/swiper-bundle.min.js', [], '8.0.0', true );
             } );
-
+    
             add_action( 'elementor/editor/after_enqueue_scripts', function () {
                 wp_enqueue_style( 'swiper-css', 'https://unpkg.com/swiper/swiper-bundle.min.css', [], '8.0.0' );
                 wp_enqueue_script( 'swiper-js', 'https://unpkg.com/swiper/swiper-bundle.min.js', [], '8.0.0', true );
             } );
         }
     }
+    
 
     private function get_widget_name( $class_name ) {
         $base_class_name = substr( strrchr( $class_name, '\\' ), 1 );
