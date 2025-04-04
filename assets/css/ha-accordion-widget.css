@@ -63,12 +63,14 @@
   font-size: 14px;
   color: #555;
   background-color: #fff;
+  display: none;
   transition: max-height 0.3s ease-out; /* Smooth transition */
 }
 
+
 /* Active Content Display */
 .ha-accordion .ha-accordion-item.active .ha-accordion-content {
-  max-height: 500px; /* Enough space to show the content */
+  display: block;
 }
 
 /* SVG Icons */

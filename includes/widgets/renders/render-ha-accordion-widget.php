@@ -44,18 +44,18 @@ function render_ha_accordion_widget( $settings ) {
         // echo '<div class="accordion-item ' . esc_attr( $is_active ) . '">';
         echo '<div class="ha-accordion-item ' . esc_attr( $is_active ) . '">';
         // echo '<div class="accordion-title" id="' . esc_attr( $item_id ) . '">';
-        echo '<div class="accordion-title" id="' . esc_attr( $item_id ) . '" aria-expanded="' . ($is_active ? 'true' : 'false') . '" aria-controls="' . esc_attr( $item_id ) . '-content">';
+        echo '<div class="ha-accordion-title" id="' . esc_attr( $item_id ) . '" aria-expanded="' . ($is_active ? 'true' : 'false') . '" aria-controls="' . esc_attr( $item_id ) . '-content">';
 
         echo '<span>' . esc_html( $item['accordion_title'] ) . '</span>';
 
         if ( 'yes' === $settings['show_icons'] ) {
-            echo '<span class="accordion-icon accordion-icon-closed">' . $icon_html . '</span>';
-            echo '<span class="accordion-icon accordion-icon-open">' . $active_icon_html . '</span>';
+            echo '<span class="ha-accordion-icon accordion-icon-closed">' . $icon_html . '</span>';
+            echo '<span class="ha-accordion-icon accordion-icon-open">' . $active_icon_html . '</span>';
         }
 
         echo '</div>';
         // echo '<div class="accordion-content">' . $item['accordion_content'] . '</div>';
-        echo '<div class="accordion-content">' . wp_kses_post( $item['accordion_content'] ) . '</div>';
+        echo '<div class="ha-accordion-content">' . wp_kses_post( $item['accordion_content'] ) . '</div>';
 
         echo '</div>';
     }

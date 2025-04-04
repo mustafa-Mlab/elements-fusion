@@ -6,23 +6,23 @@
   background-color: #f5f5f5;
 }
 
-.ha-advanced-icon-box .ha-icon {
+.ha-advanced-icon-box .ha-advanced-icon-box-icon {
   margin-right: 20px;
   font-size: 50px;
   color: #333;
 }
 
-.ha-advanced-icon-box .ha-content {
+.ha-advanced-icon-box .ha-advanced-icon-box-content {
   flex: 1;
 }
 
-.ha-advanced-icon-box .ha-title {
+.ha-advanced-icon-box .ha-advanced-icon-box-title {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
-.ha-advanced-icon-box .ha-description {
+.ha-advanced-icon-box .ha-advanced-icon-box-description {
   font-size: 16px;
   color: #777;
 }

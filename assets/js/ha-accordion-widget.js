@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Select all the accordions with the new 'ha-' prefix
   const accordions = document.querySelectorAll(".ha-accordion");
 
   accordions.forEach((accordion) => {
@@ -9,7 +8,6 @@ document.addEventListener("DOMContentLoaded", function () {
       const title = item.querySelector(".ha-accordion-title");
 
       title.addEventListener("click", () => {
-        // Close all other items in this specific accordion
         accordionItems.forEach((otherItem) => {
           if (otherItem !== item) {
             otherItem.classList.remove("active");
