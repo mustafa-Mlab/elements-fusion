@@ -217,5 +217,5 @@ To get started with **Huge Addons for Elementor**, install the plugin from the W
 
 ### Support
 
-For support, updates, and documentation, please visit our website: [Huge Addons Website](https://your-plugin-website.com).
+For support, updates, and documentation, please visit our website: [Huge Addons Website](https://themehuge.com/elementor-addons/).
 
