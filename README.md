@@ -1,6 +1,15 @@
-# Huge Addons for Elementor
+=== Huge Addons - Elementor Addons is easy and must have Elementor Addons for WordPress Page Builder. Clean, Modern, Hand crafted designed Addons blocks ===
+Contributors: nisan92
+Tags: elementor, elementor addon, elementor addons, elementor widget, widgets for elementor
+Requires at least: 4.0
+Tested up to: 6.7
+Requires PHP: 7.3
+Stable tag: 1.0.0
+License: GPLv2
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Huge Addons for Elementor is a comprehensive set of widgets and tools designed to enhance the functionality of Elementor. It provides advanced widgets catering to a variety of website design needs, offering a rich set of features to help create engaging, interactive, and visually appealing websites.
+A comprehensive set of widgets and tools designed to enhance the functionality of Elementor. It provides advanced widgets catering to a variety of website design needs, offering a rich set of features to help create engaging, interactive, and visually appealing websites.
+
 
 ### **Features**
 Huge Addons for Elementor includes the following widgets and features:
