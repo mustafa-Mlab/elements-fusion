@@ -219,6 +219,3 @@ To get started with **Huge Addons for Elementor**, install the plugin from the W
 
 For support, updates, and documentation, please visit our website: [Huge Addons Website](https://your-plugin-website.com).
 
----
-
-This update reflects the plugin's rebranding, updates to widget categories, and some general improvements. The **Huge Addons** plugin offers many widgets that will help you build powerful, interactive, and beautiful websites with Elementor. Let me know if you'd like further modifications or additions!
